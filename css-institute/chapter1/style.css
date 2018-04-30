@@ -1,0 +1,47 @@
+.wrapper {
+    position: relative;
+    width: 80px;
+}
+
+span {
+    display: block;
+    color: #000;
+    text-align: center;
+    /* 兼容性设置 */
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
+    transition: width 0.5s linear;
+}
+
+span.active {
+    color: #4d7bec;
+}
+
+/* 利用伪类生成蓝条 */
+span:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #4d7bec;
+    /* 兼容性设置 */
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
+    transition: width 0.5s linear;
+    /* 为了出现从中间向两侧延长的效果，居中 */
+    margin: 10px auto;
+}
+
+span.active:after {
+    width: 100%;
+}
+
+button {
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
